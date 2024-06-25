@@ -1,100 +1,282 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-// import GitHub from "../../public/projects/compras.png"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import SqlServer from "./icons/SqlServer.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
+import LinkButton from "./LinkButton.astro";
+import AspNet from "./icons/AspNet.astro";
+import AstroLogo from "./icons/AstroLogo.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import CSS from "./icons/CSS.astro";
+import CSharp from "./icons/CSharp.astro";
+import Express from "./icons/Express.astro";
+import ExternalLink from "./icons/ExternalLink.astro";
+import Flowbite from "./icons/Flowbite.astro";
+import GitHub from "./icons/GitHub.astro";
+import HTML from "./icons/HTML.astro";
+import Java from "./icons/Java.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Link from "./icons/Link.astro";
+import Maven from "./icons/Maven.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import MySql from "./icons/MySql.astro";
+import NodeJS from "./icons/NodeJs.astro";
+import React from "./icons/React.astro";
+import Spring from "./icons/Spring.astro";
+import SqlServer from "./icons/SqlServer.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import EJS from "./icons/EJS.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-900 text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-sky-950 text-white",
+    icon: CSS,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-indigo-950 text-white",
+    icon: Bootstrap,
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-sky-950 text-white",
     icon: Tailwind,
+  },
+  FLOWBITE: {
+    name: "Flowbite",
+    class: "bg-sky-950 text-white",
+    icon: Flowbite,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-green-950 text-white",
+    icon: NodeJS,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-neutral-800 text-white",
+    icon: AstroLogo,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#494006] text-white",
+    icon: JavaScript,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-sky-950 text-white",
+    icon: TypeScript,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-sky-950 text-white",
+    icon: React,
   },
   SQLSERVER: {
     name: "Sql Server",
-    class: "bg-black text-white",
+    class: "bg-red-950 text-white",
     icon: SqlServer,
   },
-}
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-950 text-white",
+    icon: MongoDB,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-neutral-800 text-white",
+    icon: Java,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-green-950 text-white",
+    icon: Spring,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-neutral-800 text-white",
+    icon: Express,
+  },
+  MAVEN: {
+    name: "Maven",
+    class: "bg-neutral-800 text-white",
+    icon: Maven,
+  },
+  ASPNET: {
+    name: "Asp .Net",
+    class: "bg-indigo-950 text-white",
+    icon: AspNet,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-indigo-950 text-white",
+    icon: CSharp,
+  },
+  MYSQL: {
+    name: "MySql",
+    class: "bg-sky-950 text-white",
+    icon: MySql,
+  },
+  EJS: {
+    name: "EJS",
+    class: "bg-[#494006] text-white",
+    icon: EJS,
+  },
+};
 const PROJECTS = [
   {
     title: "ERP - Modulo de compras",
     description:
-      "Este software está diseñado para gestionar: Departamentos, Marcas, Artículos, Unidades de Medida, Proveedores y Órdenes de Compra. Este Permite realizar consultas por diferentes criterios, como órdenes por fecha, departamentos y/o empleados, facilitando la administración y seguimiento de las compras dentro de la empresa.",
+      "Este software gestiona departamentos, marcas, artículos, proveedores y órdenes de compra, permitiendo consultas por criterios diversos para facilitar la administración y seguimiento de compras en la empresa.",
     link: "https://sistema-de-compras.vercel.app/",
     github: "https://github.com/Jorisanlo27/sistema-de-compras",
     image: "/projects/compras.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SQLSERVER],
+    front: [
+      TAGS.NODEJS,
+      TAGS.ASTRO,
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.FLOWBITE,
+    ],
+    back: [TAGS.SPRING, TAGS.JAVA, TAGS.MAVEN],
+    database: [TAGS.SQLSERVER],
+  },
+  /*{
+    title: "GORM",
+    description: "Operation manager",
+    link: "",
+    github: "",
+    image: "",
+    front: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP],
+    back: [TAGS.ASPNET, TAGS.CSHARP],
+    database: [TAGS.SQLSERVER],
+  },*/
+  {
+    title: "Finanzas Personales",
+    description:
+      "Sistema de Gestión de Finanzas Personales que incluye la administración de ingresos y egresos, tipos de pago, clasificaciones, usuarios, y consultas detalladas por criterios.",
+    link: "",
+    github: "https://github.com/Jorisanlo27/sistema-de-compras",
+    image: "/projects/finanzas-personales.png",
+    front: [TAGS.NODEJS, TAGS.REACT, TAGS.JAVASCRIPT],
+    back: [TAGS.SPRING, TAGS.JAVA, TAGS.MAVEN],
+    database: [TAGS.MYSQL],
   },
   {
-    title: "GORM",
+    title: "Table Tennis 27",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "E-commerce dedicado a la venta de artículos de tenis de mesa, como paletas, gomas y raquetas. El sistema incluye un catálogo de productos, carrito de compras y una sección de contacto que envía solicitudes y mensajes a través de correo electrónico.",
+    link: "",
+    github: "https://github.com/Jorisanlo27/TableTennis27",
+    image: "/projects/table-tennis-27.png",
+    front: [TAGS.HTML, TAGS.CSS, TAGS.EJS],
+    back: [TAGS.NODEJS, TAGS.EXPRESS],
+    database: [TAGS.MONGODB],
   },
-]
+  /*{
+    title: "Cafetería JOY",
+    description:
+      "Plataforma para la gestión integral de campus, cafeterías, usuarios (profesores, estudiantes, empleados, etc.), proveedores, marcas y productos. Permite realizar ventas y ofrece consultas por criterios como ventas por usuario, fecha y campus.",
+    link: "",
+    github: "https://github.com/Jorisanlo27/cafeteria-joy",
+    image: "",
+    front: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP],
+    back: [TAGS.ASPNET, TAGS.CSHARP],
+    database: [TAGS.SQLSERVER],
+  },*/
+];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-8">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    PROJECTS.map(
+      ({ image, title, description, front, back, database, link, github }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-2/5">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                alt={`Imagen Proyecto - ${title}`}
+                class="object-contain object-center w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
+            </div>
+          </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+          <div class="w-full md:w-3/5">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-col mt-2">
+              <ul class="flex flex-row mb-2 gap-2">
+                {front &&
+                  front.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+              </ul>
+              <ul class="flex flex-row mb-2 gap-2">
+                {back &&
+                  back.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+              </ul>
+              <ul class="flex flex-row mb-2 gap-2">
+                {database &&
+                  database.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+              </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
-    ))
+              <div class="mt-2 text-gray-700 text-balance dark:text-gray-400">
+                {description}
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      ),
+    )
   }
+  <LinkButton href="https://github.com/Jorisanlo27?tab=repositories">
+    <ExternalLink class="size-6" />
+    Ver mas repositorios
+  </LinkButton>
 </div>
-
-
-
